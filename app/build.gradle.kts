@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.dognothree"
-    compileSdk = 34
+    namespace = "com.gongnon"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.dognothree"
+        applicationId = "com.gongnon"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,17 +33,32 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.10" // 최신 Compose Compiler
+    }
 }
 
 dependencies {
+    implementation(platform(libs.androidx.compose.bom))
+
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.ui.tooling)
+    implementation(libs.androidx.activity.compose)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }
+
 
 
 

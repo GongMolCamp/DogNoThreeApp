@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 아이디 입력 -->
+        <EditText
+            android:id="@+id/usernameInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="아이디"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edit_text_background"
+            android:textSize="18sp" />
+
+        <!-- 비밀번호 입력 -->
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edit_text_background"
+            android:textSize="18sp" />
+
+        <!-- 이름 입력 -->
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="이름"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edit_text_background"
+            android:textSize="18sp" />
+
+        <!-- 전화번호 입력 -->
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="전화번호 (예: 01012345678)"
+            android:inputType="phone"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edit_text_background"
+            android:textSize="18sp" />
+
+        <!-- 뉴스 취향 입력 -->
+        <EditText
+            android:id="@+id/newsPreferenceInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="뉴스 취향 (예: IT, 경제)"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edit_text_background"
+            android:textSize="18sp" />
+
+        <!-- 알림 시간대 입력 -->
+        <EditText
+            android:id="@+id/notificationTimeInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="알림 시간대 (예: 09:00)"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edit_text_background"
+            android:textSize="18sp" />
+
+        <!-- 버튼 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- 뒤로 버튼 -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="뒤로"
+                android:backgroundTint="#D32F2F"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp" />
+
+            <!-- 등록하기 버튼 -->
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="등록하기"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

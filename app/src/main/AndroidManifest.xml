@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gongnon">
 
+    <!-- 인터넷 권한 추가 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,20 +15,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DogNoThree"
-        tools:targetApi="31" >
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:targetApi="31">
 
-        <activity android:name="com.gongnon.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".RegisterActivity"/>
-        <activity android:name=".MyPageActivity"/>
-        <activity android:name=".EditActivity"/>
+    <!-- Main Activity (앱 시작 시 실행되는 화면) -->
+    <activity android:name="com.gongnon.MainActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
-
+    <activity android:name=".ui.NewsDetailActivity"/>
+    <activity android:name=".RegisterActivity"/>
+    <activity android:name=".MyPageActivity"/>
+    <activity android:name=".EditActivity"/>
 
     </application>
 </manifest>
